@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            background-color: darkslateblue;
+            color:white;
+            padding: 20px;
+        }
+        .tha{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+            width:90%;
+        }
+        .navbar nav a {
+            color:white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .main-heading{
+            font-size: 25px;
+        }
+        .raw{
+            background-color: rgba(0, 255, 208, 0.54);
+            text-align: center;
+            padding: 60px;
+            border-bottom: 6px solid;
+        }
+        .button1{
+            margin-top:10px;
+            background-color: blue;
+            color:white;
+            cursor: pointer;
+            border-radius: 5px;
+            padding:15px;
+            font-size:15px;
+        }
+        .main-heading2{
+            border-left:5px solid;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            font-size:23px;
+        }
+        .cri{
+            margin:50px;
+        }
+        .table1{
+            width:100vw;
+            background: white;
+            border: 1px solid;
+            border-collapse: collapse;
+
+        }
+        .table1 th{
+            background:blue;
+            text-align: left;
+            font-size: 20px;
+            color:white;
+            padding:10px;
+        }
+        .table1 td{
+            padding:10px;
+            font-size: 16px;
+            border-bottom: 1px solid;
+        }
+        .highlight-line{
+            background-color:darksalmon;
+        }
+        .form-card{
+            background: white;
+            padding: 20px;
+            border-radius: 3px;
+            border:1px solid;
+        }
+        .form-card h3{
+            margin: 15px;
+        }
+        .form-card label{
+            display:block;
+            margin-top: 10px;
+            font-size:15px;
+        }
+        .form-card input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            border: 1px solid;
+            border-radius: 3px;
+            font_size:14px;
+        }
+    </style>
+</head>
+<body>
+    <header class = navbar>
+        <div class = tha >
+            <div class = "main-heading">TechNova Logo</div>
+            <nav>
+                <a href = "#">Schedule</a>
+                <a href = "#">Register</a>
+                <a href = "#">Location</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class = "raw">
+        <div>
+            <h1>Welcome to TechNova 2024</h1>
+            <p><strong>Date:</strong> October 12-14,2024 | <strong>Location:</strong> The Grand Innovation Center, Seattle</p>
+            <p>Join the world's leading minds in AI, Frontend and Backend Development</p>
+            <button class = "button1">Get Tickets Now</button>
+        </div>
+    </section>
+    
+    <section class = cri>
+        <h2 class = main-heading2>Conference Schedule</h2>
+        <table class = table1>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Topic</th>
+                    <th>Speaker</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Keynote: The Future of code</td>
+                    <td>Dr.Smith</td>
+                    <td>Main Hall</td>
+                </tr>
+                <tr>
+                    <td>10:30 Am</td>
+                    <td>Advanced CSS Grid</td>
+                    <td>Jane Doe</td>
+                    <td>Room A</td>
+                </tr>
+                <tr class = highlight-line>
+                    <td>12:00 PM</td>
+                    <td>Networking Lunch Break(Catered)</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>AI Integrated</td>
+                    <td>John Bot</td>
+                    <td>Room B</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>*Schedule subject to change</p>
+    </section>
+    <section class = cri>
+        <h3 class = main-heading2>Register for Tickets</h3>
+        <form class = form-card>
+            <h3 class = "form-card h3">Personal Details</h3>
+            <label>Full Name:</label>
+            <input type = text placeholder=""/>
+
+            <label>Email</label>
+            <input type = email placeholder="you@gmail.com"/>
+
+            <label>Linked IN</label>
+            <input type = url placeholder="https://linkedin.com"/>
+
+        </form>
+
+        <form class = form-card>
+            <h3 class = "main-heading2">Tickets Preferences</h3>
+
+            <label for="T-Shirt Size">T-Shirt Size:</label>
+            <input type="radio" id="low" name="T-Shirt Size" value="low">
+            <label for="low">Low</label>
+            <input type="radio" id="medium" name="T-Shirt Size" value="medium" checked>
+            <label for="medium">Medium</label>
+            <input type="radio" id="high" name="T-Shirt Size" value="high">
+            <label for="high">High</label>
+        </form>
+    </section>
+</body>
+</html>
