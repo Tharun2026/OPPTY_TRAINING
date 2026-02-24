@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background:#f3f3f3;
+            color:#111;
+        }
+        .navbar-custom {
+            position:fixed;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            margin-bottom: 40px;
+        }
+
+        .navbar-custom nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .navbar-custom a {
+            color: Black;
+            margin-left: 20px;
+            text-decoration: none;
+            padding-right:20px;
+        }
+        .section-1{
+            padding: 200px 80px 120px 80px;
+        }
+        .section-1 h1{
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 1.2;
+            max-width: 1100px;
+        }
+        .section-2{
+            padding: 100px 80px;
+        }
+        .materials-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .materials-grid img{
+            width:100%;
+            max-width:500px;
+        }
+        .tharun{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+        }
+        .text-box{
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .text-box1{
+            line-height: 1.8;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .image-box{
+            width: 500px;
+            height: auto;
+            object-fit: cover;
+        }
+        .images-group{
+            display:flex;
+            gap:30px;
+        }
+        .images-group img{
+            width: 320px;
+            height: 80vh;
+            object-fit: cover;
+            padding-right: 30px;
+        }
+        .links-box h2{
+            font-size:28px;
+            margin-bottom:20px;
+        }
+        .links-box p{
+            line-height:1.8;
+            margin-bottom:30px;
+            max-width:500px;
+        }
+        .footer {
+            background: rgb(206, 206, 206);
+            padding: 100px 120px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 80px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-logo h2 {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .footer-logo span {
+            font-weight: 300;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-bottom {
+            margin-top: 80px;
+            text-align: left;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .rohith{
+            font-size: 28px;
+            font-weight: 400;
+            padding: 20px;
+        }
+        .dropdown-container{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 15px 0;
+        }
+        .dropdown-content a{
+            color: black;
+            text-decoration: underline;
+            display:block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        .dropdown-content a:hover {
+            background: #f3f3f3;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar-custom">
+        <nav>
+            <h1 style = padding-right:20px;>Bridge<span>Architects</span></h1>
+            <div>
+                <a href="13.html">Home</a>
+                <div class = dropdown-container>
+                    <a href="#">Pages</a>
+                    <div class = dropdown-content>
+                        <a href = "aboutus.html">About us</a>
+                        <a href = "studio.html">Our Services</a>
+                        <a href = "services.html">Our Studio</a>
+                    </div>
+                </div>
+                
+                <a href="portifilo.html">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class = section-1>
+        <h1>LightHouse Architects tempus quam pellent esque nec.Curabitur gravida arcu ax tortor dignissim convallis. Phasellus vestibulum lorem sed risus ultricies tritique.</h1>
+    </section>
+
+    <section class="section-2">
+    <div class="materials-grid">
+
+        <div>
+            <h2 class = text-box>Materials</h2>
+            <p class = text-box1>
+                Arcu risus quis varius quam quisque id diam vel. Aliquet lectus<br>
+                proin nibh nisl condimentum id venenatis. Lorem sed risus<br>
+                ultricies tristique nulla aliquet enim tortor at.
+            </p>
+        </div>
+
+        <div  class = image-box>
+            <img src="about.jpg" alt="Materials">
+        </div>
+
+    </div>
+</section>
+
+    <section class = section-3>
+        <div class = tharun>
+            <div class = images-group>
+                <img src = "about1.jpg"> 
+                <img src = "about2.jpg">
+            </div>
+            <div class = rohith>
+                <h1>Pratice</h1>
+                <p style = "font-size: 20px;">Arcus risus quis varius quam quisque id diam vel.Aliquet lectus proin nibh nisl condi me ntum. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Nunc cong ue nisi vitae su scipit tellus mauris a diam maecenas. Pulvinar elmentum integer enim neque volutpat ac tincidunt vitae semper est ultricies integer nus.</p>
+                <div>
+                    <h1 style = "text-decoration:underline; font-size: 28px; padding-top: 20px;">Design a perfect home<br>Download our brochure<br>Ask us your questions our architects</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-logo">
+            <h2>Bridge<br><span>Architects</span></h2>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+            <h4>SOCIAL</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <!-- Info -->
+        <div class="footer-col">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Studio</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h4>CONTACT</h4>
+            <ul>
+                <li>12 Terra Str, NY</li>
+                <li>+585 889 9964</li>
+                <li>bridge@example.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 QODEINTERACTIVE</p>
+    </div>
+    </footer>
+
+
+</body>
+</html>

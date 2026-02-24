@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown-container{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 15px 0;
+        }
+        .dropdown-content a{
+            color: black;
+            text-decoration: underline;
+            display:block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        .dropdown-content a:hover {
+            background: #f3f3f3;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: flex;
+        }
+        .navbar-custom {
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+        }
+
+        .navbar-custom nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .navbar-custom a {
+            color: Black;
+            margin-left: 20px;
+            text-decoration: none;
+            padding-right:20px;
+        }
+        .blog-section {
+            padding: 140px 8%;
+            background: white;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: 2.3fr 1fr;
+            gap: 90px;
+        }
+
+        .blog-main-img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            margin-bottom: 40px;
+        }
+
+        .blog-title {
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .blog-meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .blog-quote1{
+            background-color: #cacaca;
+            height: 30vh;
+            margin-bottom: 30px;
+        }
+
+        .blog-quote {
+            font-size: 20px;
+            margin: 50px 0 120px 0;
+            line-height: 1.8;
+            padding: 60px;
+        }
+        .blog-video {
+            margin-top: 60px;
+        }
+
+        .sidebar-block {
+            margin-bottom: 60px;
+        }
+
+       .sidebar-title {
+            font-size: 23px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-list li {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .read-next {
+            list-style: none;
+            padding: 0;
+        }
+        .read-next li {
+            margin-bottom: 18px;
+            font-size: 24px;
+        }
+        .read-next .small-link {
+            font-size: 20px;
+        }
+
+        .read-next .big-link {
+            font-size: 18px;
+        }
+
+        .newsletter-container {
+            width: 400px;
+            text-align: center;
+            color: #fff;
+            background-color: black;
+        }
+        .newsletter-container h2 {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 60px;
+            padding: 20px;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .newsletter-form input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #bbb;
+            padding: 10px 5px;
+            font-size: 14px;
+            color: #fff;
+            letter-spacing: 3px;
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #cfcfcf;
+            letter-spacing: 4px;
+         }
+        .newsletter-form button {
+            background: transparent;
+            border: 1px solid #bbb;
+            padding: 18px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: lowercase;
+            transition: 0.3s ease;
+        }
+        .newsletter-form button:hover {
+            background: #fff;
+            color: #000;
+        }
+        .inspired {
+            margin-top: 50px;
+        }
+
+        .sidebar-title {
+            font-size: 26px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .inspired-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;   
+            gap: 0;                         
+        } 
+
+        .inspired-grid img {
+            width: 100%;
+            height: 170px;        
+            object-fit: cover;    
+            display: block;
+        }
+
+        .pagination-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .arrow {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .pages {
+            display: flex;
+            gap: 40px;
+            position: relative;
+        }
+
+        .page {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .page.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+        }
+        .product-section {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            background-color: rgb(197, 189, 189);
+        }
+        .book-wrapper{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .book{
+            width: 280px;
+            border-radius: 4px;
+        }
+        .product-info h2 {
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .order-text {
+            letter-spacing: 4px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer {
+            padding: 100px 120px;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 80px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-logo h2 {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .footer-logo span {
+            font-weight: 300;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-bottom {
+            margin-top: 80px;
+            text-align: left;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar-custom">
+        <nav>
+            <h1 style = "padding-right:20px; color: black;">Bridge<span>Architects</span></h1>
+            <div>
+                <a href="13.html">Home</a>
+                <div class = dropdown-container>
+                    <a href="#">Pages</a>
+                    <div class = dropdown-content>
+                        <a href = "aboutus.html">About us</a>
+                        <a href = "studio.html">Our Services</a>
+                        <a href = "services.html">Our Studio</a>
+                    </div>
+                </div>
+                
+                <a href="portifilo.html">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <section>
+        <p>Home/Blog</p>
+    </section>
+
+   <section class="blog-section">
+    <div class="blog-container">
+        <div class="blog-left">
+            <img src="https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/blog-4a.jpg" class="blog-main-img">
+
+            <h1 class="blog-title">
+                14 Dec Living Room Trends For The Upcoming Season 2024
+            </h1>
+
+            <div class="blog-meta">
+                Posted at 21:54h in Landscape Architecture 0 Comments
+            </div>
+
+            <div class="blog-quote1">
+                <div class = blog-quote>
+                    Architecture is not only about structures — it is about shaping
+                    environments that influence the way we live and experience space.
+                </div>    
+            </div>
+
+            <hr>
+
+            <img src="https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/blog-8.jpg" class="blog-main-img">
+
+            <h1 class="blog-title">
+                14 Dec Modern Urban Design And Contemporary Structures
+            </h1>
+
+            <div class="blog-meta">
+                Posted at 18:32h in Interior Design 2 Comments
+            </div>
+
+            <hr>
+
+            <div class = blog-quote1>
+                <div class = blog-quote>
+                    <p style = "text-decoration: underline;">Ty.pes of flooring to consider for your new apartment</p>
+                </div>
+            </div>
+
+            <div class="blog-video">
+                <iframe width="100%" height="500"
+                    src="https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/home3-3_1.mp4"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+
+
+        <aside class="blog-right">
+            <div>
+                <label>Search</label>
+                <input type="text">
+            </div>
+            
+
+
+            <div class="sidebar-block">
+                <h4 class="sidebar-title">BLOG CATEGORIES</h4>
+                <ul class="sidebar-list">
+                    <li>Architecture</li>
+                    <li>Interior Design</li>
+                    <li>Landscape</li>
+                    <li>Urban Planning</li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-block">
+                <h4 class="sidebar-title">READ NEXT</h4>
+                <ul class="read-next">
+                    <li class="small-link">Landscape Architecture</li>
+                    <li class="big-link">Minimal Structure and Balance</li>
+                    <li>Modern Living Concepts</li>
+                    <li>Timeless Architectural Ideas</li>
+                </ul>
+            </div>
+
+            <div class="newsletter-section">
+                <div class="newsletter-container">
+                    <h2>Join Our Newsletter</h2>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E - MAIL" required>
+                        <button type="submit">send</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="sidebar-block inspired">
+                <h4 class="sidebar-title">GET INSPIRED</h4>
+                <div class="inspired-grid">
+                    <img src="https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/image-gallery-4.jpg">
+                    <img src = https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/image-gallery-3.jpg>
+                    <img src = https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/image-gallery-2.jpg>
+                    <img src = https://bridge499.qodeinteractive.com/wp-content/uploads/2022/12/img-gallery-1.jpg>
+                </div>
+            </div>
+
+            <section class="product-section">
+
+                <div class="book-wrapper">
+                    <img src="house.jpg" alt="Light House Magazine" class="book">
+                </div>
+
+                <div class="product-info">
+                    <h2>Light House Magazine No 23</h2>
+                    <p class="order-text">ORDER NOW</p>
+                </div>
+
+            </section>
+
+        </aside>
+
+    </div>
+</section>
+
+
+<div class="pagination-container">
+    <button class="arrow">&#10094;</button>
+
+    <div class="pages">
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+    </div>
+
+    <button class="arrow">&#10095;</button>
+</div>
+
+<hr>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <h2>Bridge<br><span>Architects</span></h2>
+        </div>
+
+
+        <div class="footer-col">
+            <h4>SOCIAL</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+
+  
+        <div class="footer-col">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Studio</a></li>
+            </ul>
+        </div>
+
+     
+        <div class="footer-col">
+            <h4>CONTACT</h4>
+            <ul>
+                <li>12 Terra Str, NY</li>
+                <li>+585 889 9964</li>
+                <li>bridge@example.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 QODEINTERACTIVE</p>
+    </div>
+    </footer>
+
+</body>
+</html>
+

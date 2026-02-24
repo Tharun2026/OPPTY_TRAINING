@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown-container{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 15px 0;
+        }
+        .dropdown-content a{
+            color: black;
+            text-decoration: underline;
+            display:block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        .dropdown-content a:hover {
+            background: #f3f3f3;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: flex;
+        }
+        .navbar-custom {
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+        }
+
+        .navbar-custom nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .navbar-custom a {
+            color: Black;
+            margin-left: 20px;
+            text-decoration: none;
+            padding-right:20px;
+        }
+        .contact-section{
+            display: flex;
+            justify-content: space-between;
+            padding: 80px;
+            gap: 50px;
+        }
+        .cric{
+            flex: 1;
+        }
+        .cric h1{
+            font-size:60px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .cric p{
+            font-size: 16px;
+            line-height:1.6;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+        .contact-form .row{
+            display: flex;
+            gap: 40px;
+        }
+        .input-group{
+            flex: 1;
+            margin-bottom: 40px;
+        }
+        .input-group label{
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #767676;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .input-group input{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #999;
+            background: transparent;
+            padding: 10px 0;
+            font-size: 14px;
+            outline: none;
+        }
+
+        button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover{
+            background: #282828;
+        }
+        .right {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 40px;
+        }
+        .info-box h4 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+        .info-box p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .map-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+ .footer {
+            background: rgb(255, 255, 255);
+            padding: 100px 120px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 80px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-logo h2 {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .footer-logo span {
+            font-weight: 300;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+       .footer-col ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-bottom {
+            margin-top: 80px;
+            text-align: left;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar-custom">
+        <nav>
+            <h1 style = "padding-right:20px; color:black;">Bridge<span>Architects</span></h1>
+            <div>
+                <a href="#">Home</a>
+                <div class = dropdown-container>
+                    <a href="#">Pages</a>
+                    <div class = dropdown-content>
+                        <a href = "aboutus.html">About us</a>
+                        <a href = "studio.html">Our Services</a>
+                        <a href = "services.html">Our Studio</a>
+                    </div>
+                </div>
+                
+                <a href="portifilo.html">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <section class = contact-section>
+        <div class = cric>
+            <h1>Contact US</h1>
+            <p>Morbi tristique senectus et netus. Arcu odio ut sem nulla pharetra. Sapien eget mi proin sed libero enim sed faucibus turpis. Sit amet cursus sit amet.</p>
+
+            <form class = contact-form>
+                <div class = row>
+                    <div class = input-group>
+                        <label>Full Name</label>
+                        <input type = text>
+                    </div>
+                    <div class = input-group>
+                        <label>E-MAIL</label>
+                        <input type = email>
+                    </div>
+                </div>
+
+                <div  class = input-group>
+                    <label>Message</label>
+                    <input rows = 5>
+                </div>
+
+                <button type = submit>Send Message</button>
+            </form>
+        </div>
+
+        <div class = right>
+            <div class = info-box>
+                <h4>DIRECT CONTACT</h4>
+                <p>123 Terra Street,<br>Copenhagen</p>
+                <p>1800-2000-5400</p>
+                <p>bridge@example.com</p>
+            </div>
+
+            <div class = info-box>
+                <h4>ADMINISTRATIVE HOURS</h4>
+                <p>123 Terra Street, <br>Copenhagen</p>
+                <p>1800-2000-5400</p>
+                <p>bridge@example.com</p>
+            </div>
+
+            <div class = info-box>
+                <h4>COPENHAGEN</h4>
+                <p>123 Terra Street,<br>Copenhagen</p>
+                <p>1800-2000-5400</p>
+                <p>bridge@example.com</p>
+            </div>
+
+            <div class = info-box>
+                <h4>LISBON</h4>
+                <p>123 Terra Street, <br>Copenhagen</p>
+                <p>1800-2000-5400</p>
+                <p>bridge@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+    <iframe
+        src="https://maps.google.com/maps?q=New+York,USA&z=13&output=embed"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+
+     
+        <div class="footer-logo">
+            <h2>Bridge<br><span>Architects</span></h2>
+        </div>
+
+  
+        <div class="footer-col">
+            <h4>SOCIAL</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Studio</a></li>
+            </ul>
+        </div>
+
+       
+        <div class="footer-col">
+            <h4>CONTACT</h4>
+            <ul>
+                <li>12 Terra Str, NY</li>
+                <li>+585 889 9964</li>
+                <li>bridge@example.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 QODEINTERACTIVE</p>
+    </div>
+</footer>
+
+</body>
+</html>

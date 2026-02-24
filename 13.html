@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeSoft</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .navbar-custom {
+            position:fixed;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+        }
+
+        .navbar-custom nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .navbar-custom a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            padding-right:20px;
+        }
+
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .section-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            padding:60px;
+            margin: auto;
+            padding-top:100px;
+        }
+        .s-head{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .s-img{
+            max-width:800px
+        }
+        .s-img img{
+            height: 400px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .section-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:50px;
+        }
+        .tharun{
+            font-size:28px;
+            text-decoration: underline;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .section-3{
+            background-color: black;
+            min-height: 100vh;  
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            padding-left: 80px;
+        }
+        .ul-1{
+            color:white;
+            margin-bottom:40px;
+        }
+        .car{
+            width:800px;
+        }
+        .car-item{
+            text-align: center;
+        }
+        .car-item img{
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .section-4{
+            background: url("01_Purpose-Functionality.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height:100vh;
+            width:100vw;
+            overflow:hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            text-align:start;
+            padding: 60px;
+            margin-top:50px;
+        }
+        .img-heading{
+            padding:40px;
+            font-size:40px;
+            color:white;
+            text-align: center;
+            max-width:600px;
+        }
+        .section-5{
+            background-color: rgb(206, 206, 206);
+            padding: 80px 80px;
+        }
+        .contain-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            max-width:1300px;
+        }
+        .contain-img img{
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .contain-info{
+            background-color: rgb(206, 206, 206);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+        .contain-info h1{
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .contain-info p{
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .contain-box{
+            background: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contain-box a{
+            text-decoration: underline;
+            color:black;
+            font-size: 18px;
+        }
+        .font-info i{
+            margin-right:15px;
+            cursor: pointer;
+            transform: 0.3s;
+        }
+        .font-info:hover i {
+            color:orange;
+        }
+        .empty-box{
+            background-color:rgb(206, 206, 206);
+        }
+        .blog-card img {
+            width: 100%;
+            display: block;
+            padding: 10px;
+        }
+        .para1 {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .blog-card h2 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .contain-grid1{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            max-width:1300px;
+            padding:10px;
+        }
+        .section-6{
+            padding:90px 60px;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            background: rgb(206, 206, 206);
+            padding: 100px 120px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 80px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-logo h2 {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .footer-logo span {
+            font-weight: 300;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+       .footer-col ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-bottom {
+            margin-top: 80px;
+            text-align: left;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .categories-section {
+            display: flex;
+            align-items: center;
+            padding: 140px 90px;
+            background: #fffafa;
+        }
+
+        .categories {
+            display: flex;
+            align-items: center;
+            gap: 80px;           
+            margin-right: 100px;
+    
+        }
+
+        .categories span {
+            position: relative;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 40px;
+            font-weight: 300;
+            color: #dcdcdc;
+            letter-spacing: 2px;
+        }
+
+        .categories span:not(:last-child)::before {
+            content: "";
+            position: absolute;
+            left: -35px;   
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 580px;
+            background: #e9e9e9;
+        }
+        .categories span.active {
+            color: #111;
+        }
+        .categories span:last-child::after {
+            display: none;
+        }
+
+        .category-image img {
+            width: 420px;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .category-content {
+            max-width: 420px;
+            margin-left: 120px;
+        }
+
+        .category-content .desc {
+            font-size: 14px;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .read-more {
+            font-size: 16px;
+            text-decoration: none;
+            color: #111;
+            border-bottom: 1px solid #111;
+            padding-bottom: 4px;
+        }
+        .section-7{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 160px;
+        }
+        .dropdown-container{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 15px 0;
+        }
+        .dropdown-content a{
+            color: black;
+            text-decoration: underline;
+            display:block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        .dropdown-content a:hover {
+            background: #f3f3f3;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: flex;
+        }
+
+    </style>
+</head>  
+<body>
+    <div class="navbar-custom">
+        <nav>
+            <h1 style = padding-right:20px;>Bridge<span>Architects</span></h1>
+            <div>
+                <a href="#">Home</a>
+                <div class = dropdown-container>
+                    <a href="#">Pages</a>
+                    <div class = dropdown-content>
+                        <a href = "aboutus.html">About us</a>
+                        <a href = "studio.html">Our Services</a>
+                        <a href = "services.html">Our Studio</a>
+                    </div>
+                </div>
+                
+                <a href="portifilo.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active" >
+                <img src="h1-port-img-02-1.jpg.jpeg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+                <img src="ra.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src= "ra1.jpg" class="d-block w-100">
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="slider" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="slider" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <section class = section-1>
+        <div class = s-head>
+                <ul><li>Architect studio</li></ul>
+                <h1>Architects excited about beauty, affordability sustainability materials for every project and person</h1>
+                <a href = # style = "text-decoration: underline; color:black">read more</a>
+            </div>
+            <div class = s-img>
+                <img src = "h1-img-01.jpg" >
+            </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <div class = section-2 >
+            <div>
+                <h1 class = tharun>Design a perfect home <br>Download our brochure<br>Ask us your questions our architects</h1>
+            </div>
+            <div>
+                <h1>Urban Exteriors</h1>
+                <p>Purus sit amet vol utpat con sequat mauris nunc congue.<br>
+                Sed id s emper risus in hend rerit. Facilisi etiam dignissim diam quis enim.Quis auctor.</p>
+            </div>
+            <div>
+                <h1>Cityscapes Buildings</h1>
+                <p>Purus sit amet vol utpat con sequat mauris nunc congue.<br>
+                Sed id s emper risus in hend rerit. Facilisi etiam dignissim diam quis enim.Quis auctor.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-3">
+    <ul class="ul-1">
+        <li>OUR PROJECTS</li>
+    </ul>
+
+    <div id="projectCarousel" class="carousel slide car" data-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active car-item">
+                <img src="h1-port-img-01.jpg" class="d-block">
+            </div>
+
+            <div class="carousel-item car-item">
+                <img src="h1-port-img-02.jpg" class="d-block">
+            </div>
+
+            <div class="carousel-item car-item">
+                <img src="h1-port-img-03-1.jpg" class="d-block">
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#projectCarousel"  role = "button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#projectCarousel" role = "button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+<section class="categories-section">
+    <div class="categories">
+      <span class="active">Planning</span>
+      <span class="active">Exterior</span>
+      <span class="active">Residential</span>
+      <span class="active">Interior</span>
+    </div>
+
+    <div class="category-image">
+      <img src="h11-port-img-12-hover.jpg" alt="Interior design">
+    </div>
+
+    <div class="category-content">
+        <p class="desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        </p>
+        <a href="#" class="read-more">read more</a>
+    </div>
+
+</section>
+
+<section class = section-4>
+    <div>
+        <h1 class="img-heading">The Whimsical feel of villa esther begins with the neo-modern gateway in the style of le corbusier's villa savoye</h1>
+    </div>
+</section>
+
+
+<section class = section-5>
+    <div class = contain-grid>
+        <div class=contain-img>
+            <img src = "h1-team-img-01.jpg">
+        </div>
+
+        <div class = contain-info>
+            <h1>Robert Jhonson</h1>
+            <p>CEO / ARCHITECT</p>
+            <div class = font-info>
+                <i class = "fab fa-twitter"></i>
+                <i class = "fab fa-linkedin"></i>
+                <i class = "fab fa-facebook"></i>
+            </div>
+        </div>
+
+        <div class = contain-img>
+            <img src = "h1-team-img-02.jpg">
+        </div>
+
+        <div class="contain-info">
+            <h1>Aida Betul</h1>
+            <p>MAIN CONTRACTOR</p>
+            <div class = font-info>
+                <i class = "fab fa-twitter"></i>
+                <i class = "fab fa-linkedin"></i>
+                <i class = "fab fa-facebook"></i>
+            </div>
+        </div>
+
+        <div class = contain-box>
+            <a href =#>jobs and internships</a>
+        </div>
+
+        <div class = empty-box>
+
+        </div>
+
+        <div class = contain-img>
+            <img src = "h1-team-img-03.jpg">
+        </div>
+
+         <div class = contain-info>
+            <h1>Robecca Wales</h1>
+            <p>CEO / ARCHITECT</p>
+            <div class = font-info>
+                <i class = "fab fa-twitter"></i>
+                <i class = "fab fa-linkedin"></i>
+                <i class = "fab fa-facebook"></i>
+            </div>
+        </div>
+
+         <div class = contain-img>
+            <img src = "h1-team-img-04.jpg">
+        </div>
+         <div class = contain-info>
+            <h1>Guillermo Medici</h1>
+            <p>CEO / ARCHITECT</p>
+            <div class = font-info>
+                <i class = "fab fa-twitter"></i>
+                <i class = "fab fa-linkedin"></i>
+                <i class = "fab fa-facebook"></i>
+            </div>
+        </div>    
+    </div>
+</section>
+
+
+
+<section class=" section-7">
+    <div>
+        <h1 style="font-size: 18px;">Consuli norum eget magna. Quis varius quam quisque id.Amet justo donec enim diam vulputate ut pharetra sit.Nunv eget lorem dolor phatera len.</h1>
+        <p style="text-align: center;">MIKE NICHOLSON ARCHITECT / M3 PROJECTS</p>
+    </div>
+</section>
+
+
+<section class="section-5">
+  <div class="contain-grid1">
+
+    <article class="blog-card">
+      <img src="blog-3.jpg" alt="Studio Hiroshi Interior Design">
+      <div class="blog-content">
+        <p class="para1">December 14, 2022 / Interviews</p>
+        <h2>Studio Hiroshi Cuisine And Bar Innovative Interior Design</h2>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <img src="blog-4a.jpg" alt="Zara Madid Portrait">
+      <div class="blog-content">
+        <p class="para1">December 14, 2022 / Interviews</p>
+        <h2>Zara Madid Speaking About Her Influence And Creative Vision</h2>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <img src="blog-8.jpg" alt="Glass Wall Facade Building">
+      <div class="blog-content">
+        <p class="para1">December 14, 2022 / Interviews</p>
+        <h2>Glass Wall Facade And How To Design It With AluProfiles</h2>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <img src="blog-1.jpg" alt="Interior With Wooden Ceiling">
+      <div class="blog-content">
+        <p class="para1">December 14, 2022 / Interviews</p>
+        <h2>Coexisting With The Landscape Is The Main Rule</h2>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class = section-6>
+    <div>
+        <h1>Let us make something beautiful together</h1>
+        <a href =# style="text-align: center; color: black; text-decoration: none;">Contact us</a>
+    </div>
+</section>
+
+<hr>
+
+<footer class="footer">
+    <div class="footer-container">
+
+    
+        <div class="footer-logo">
+            <h2>Bridge<br><span>Architects</span></h2>
+        </div>
+
+      
+        <div class="footer-col">
+            <h4>SOCIAL</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Behance</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Studio</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="footer-col">
+            <h4>CONTACT</h4>
+            <ul>
+                <li>12 Terra Str, NY</li>
+                <li>+585 889 9964</li>
+                <li>bridge@example.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 QODEINTERACTIVE</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
