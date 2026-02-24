@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .navbar-custom{
+            background: url("back-1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .navbar-custom h1{
+            color: white;
+            font-size: 40px;
+        }
+        .navbar-custom nav{
+           position: relative;
+           z-index: 3;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 20px 60px;
+           color: white;
+        }
+        .navbar-custom nav a{
+            color:white;
+            font-size:20px;
+            padding: 10px;
+        }
+        .icons{
+            color:white;
+            font-size:20px;
+            padding: 10px;
+            display: flex;
+            gap:20px;
+        }
+        .center-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            padding-top: 200px;
+        }
+        nav a:hover{
+            color:pink;
+        }
+        nav i:hover{
+            color: pink;
+        }
+         .section-1{
+        padding: 70px 90px;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 50px;
+    }
+    .image-box img{
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        display: block;
+    }
+    .content-box{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-box h1{
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .content-box p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+
+    }
+    .content-box button{
+        padding: 12px 25px;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .content-box:hover button{
+        color: white;
+        background-color: black;
+    }
+     .image-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        gap: 20px;
+    }
+    .image-box1{
+        position: relative;
+        overflow: hidden;
+    }
+    .image-box1 img{
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: 0.5s ease;
+    }
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+    .overlay h1{
+        color: white;
+        font-size: 38px;
+        font-style: italic;
+        text-align: center;
+    }
+    .image-box1:hover .overlay{
+        opacity: 1;
+    }
+    .image-box1:hover img{
+        transform: scale(1.05);
+    }
+     .section-3{
+        padding: 100px 120px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-container{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-container h1{
+        font-size: 60px;
+        font-weight: 400;
+        font-style: italic;
+       margin-bottom: 20px;
+    }
+    .content-container h1 span{
+        font-size: 70px;
+        font-weight: 700;
+        font-style: italic;
+    }
+    .section-7{
+            height: 100vh;
+            background: url(https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    } 
+        .content-footer{
+        position:relative;
+        z-index: 2;
+        max-width: 800px;
+    } 
+    .content-footer h1{
+        font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .content-footer p{
+        font-size: 30px;
+        margin: 8px 0;
+    }
+    .social-icons{
+        margin-top:25px;
+    }
+    .social-icons a{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:50px;
+        height:50px;
+        margin:0 10px;
+        border-radius:50%;
+        background:#ffffffb8;
+        color:#000;
+        font-size:20px;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+    .social-icons a:hover{
+        background:#d0a9a9;
+        transform:translateY(-5px);
+    }
+    </style>
+</head>
+<body>
+    <header class = navbar-custom>
+        <nav>
+            <h1>bridge</h1>
+            <div>
+                <a href = "14.html">Home</a>
+                <a href = "14_team.html">Team</a>
+                <a href = "14_about.html">About</a>
+                <a href = "14_contact.html">Conntact</a>
+            </div>
+            <div class = icons>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </nav>
+        <div class = center-container>
+            <h1>Our About</h1>
+        </div>
+    </header>
+
+    <section class = section-1>
+        <div class = grid-container>
+            <div class = image-box>
+                <img src = https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/h1-img-1.jpg>
+            </div>
+            <div class = content-box>
+                <h1>Artisan <br>chocolatier</h1>
+                <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit,sed do eiusmod tempor incididunt ut  labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation</p>
+                <button>Read all</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+    <div class = image-container>
+        <div class = image-box1>
+            <img src = "Screenshot 2026-02-20 111958.png">
+            <div class = overlay>
+                <h1>WorkShop<br>Registeration</h1>
+            </div>
+        </div>
+        <div class = image-box1>
+            <img src = "Screenshot 2026-02-20 112020.png">
+            <div class = overlay>
+                <h1>Love<br>Chocolate</h1>
+            </div>
+        </div>
+        <div class = image-box1>
+            <img src = "Screenshot 2026-02-20 112020.png">
+            <div class = overlay>
+                <h1>Think<br>Chocolate</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class = section-3>
+    <div class = content-container>
+        <h1><span>Chocolate</span> reviews</h1>
+        <p style = "max-width:800px; font-size:25px; line-height: 1.6; margin-bottom: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <p style = "font-size:35px; font-weight: 500;">Medison Jon</p>
+        <div>
+            <button>&#10094</button>
+            <button>&#10095</button>
+        </div>
+    </div>
+</section>
+
+<section class = section-7>
+    <div></div>
+    <div class = content-footer>
+        <h1>bridge</h1>
+        <p>@copyright Qode Interactive- ALL Rights Reserved</p>
+        <p>Proudly Made For You.</p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

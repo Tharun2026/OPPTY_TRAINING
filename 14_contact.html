@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+.map-section{
+  position: relative;
+  height: 600px;
+}
+.map-section iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  filter: grayscale(100%) brightness(30%) contrast(120%);
+  color: white;
+}
+.navbar-custom{
+  position:absolute;       
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:10;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.navbar-custom nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
+}
+
+.navbar-custom nav h1{
+  font-size:30px;
+}
+
+.navbar-custom nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.icons i{
+  margin-left:15px;
+  cursor:pointer;
+}
+.center-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-grow:1;
+}
+
+.center-container h1{
+  font-size:70px;
+  letter-spacing:3px;
+}
+
+.contact-section{
+  position:relative;
+  z-index:2;
+  margin-top:-300px; 
+  display:flex;
+  justify-content:center;
+  padding-bottom:100px;
+}
+
+.contact-container{
+  width:85%;
+  background:#f6efef;
+  padding:80px;
+  display:flex;
+  justify-content:space-between;
+  box-shadow:0 30px 60px rgba(0,0,0,0.08);
+}
+
+.contact-form{
+  width:45%;
+}
+
+.contact-form label{
+  display:block;
+  margin-bottom:10px;
+  font-size:14px;
+  color:#777;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  border:none;
+  border-bottom:1px solid #ccc;
+  padding:12px 0;
+  margin-bottom:40px;
+  outline:none;
+  font-size:14px;
+}
+
+.contact-form button{
+  padding:15px 50px;
+  background:transparent;
+  border:1px solid #000;
+  letter-spacing:3px;
+  font-size:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  background:#000;
+  color:#fff;
+}
+
+.shop-info{
+  width:45%;
+}
+
+.shop-info h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  margin-bottom:25px;
+}
+
+.shop-info h2 span{
+  font-style:italic;
+}
+
+.shop-info p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+.details p{
+  color:#444;
+  margin-bottom:8px;
+}
+
+.promise-section {
+  background: #ffffff;
+  padding: 120px 0;         
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.promise-wrapper {
+  width: 100%;
+  max-width: 1400px;        
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.promise-image {
+  width: 85%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.section-7{
+        height: 100vh;
+        background: url(https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    } 
+        .content-footer{
+        position:relative;
+        z-index: 2;
+        max-width: 800px;
+    } 
+    .content-footer h1{
+        font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .content-footer p{
+        font-size: 30px;
+        margin: 8px 0;
+    }
+    .social-icons{
+        margin-top:25px;
+    }
+    .social-icons a{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:50px;
+        height:50px;
+        margin:0 10px;
+        border-radius:50%;
+        background:#ffffffb8;
+        color:#000;
+        font-size:20px;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+    .social-icons a:hover{
+        background:#d0a9a9;
+        transform:translateY(-5px);
+    }
+
+
+</style>
+</head>
+
+<body>
+
+<section class="map-section">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424141.6978944982!2d150.93197474999997!3d-33.84824395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sin!4v1771526692605!5m2!1sen!2sin"
+    loading="lazy">
+  </iframe>
+  <header class="navbar-custom">
+    <nav>
+      <h1>bridge</h1>
+      <div>
+        <a href="14.html">Home</a>
+        <a href="14_team.html">Team</a>
+        <a href="14_about.html">About</a>
+        <a href="14_contact.html">Contact</a>
+      </div>
+      <div class="icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+    </nav>
+  </header>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <div class="contact-form">
+      <form>
+        <label>Name*</label>
+        <input type="text" required>
+
+        <label>Email*</label>
+        <input type="email" required>
+
+        <label>Message</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+
+    <div class="shop-info">
+      <h2><span>Visit</span> our shops</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore.
+      </p>
+
+      <div class="details">
+        <p>09:00–19h Monday – Friday</p>
+        <p>75-11 Jewett Ave Jersey City, NJ 07304 USA</p>
+        <p>+ (1) 555 678 786</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promise-section">
+  <div class="promise-wrapper">
+    <img 
+      src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/contact-us-img-1.png"
+      alt="Choco Promise"
+      class="promise-image"
+    >
+  </div>
+</section>
+
+<section class = section-7>
+    <div></div>
+    <div class = content-footer>
+        <h1>bridge</h1>
+        <p>@copyright Qode Interactive- ALL Rights Reserved</p>
+        <p>Proudly Made For You.</p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
