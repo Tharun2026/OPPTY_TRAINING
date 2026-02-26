@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            border-left: 4px solid rgb(25, 4, 40);
+        }
+        .navbar{
+            background-color: rgb(25, 4, 40);
+            padding: 10px;
+            margin: 0 10px 0 10px;
+        }
+        .navbar nav h1{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .navbar nav{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar nav a{
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        .main-container{
+            display: flex;
+        }
+        .left-side{
+            background-color: #ebecf0;
+            width: 25%;
+            padding: 20px 50px;
+        }
+        .left-side h3{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .tharun{
+            background: rgb(245, 249, 248);
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .inside-container{
+            background: white;
+            width: 500px;
+            height: 400px;
+            padding: 40px;
+            border: 4px solid #212f5a;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+        .inside-container h1{
+            margin-bottom: 20px;
+            font-size: 40px;
+            color: #212f5a;
+        }
+        .button-1{
+            margin-top: 25px;
+            padding: 15px 25px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .footer{
+            color: #212f5a;
+            text-align: center;
+            padding: 17px;
+        }
+        .icons{
+            font-size: 25px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #212f5a;
+        }
+        .icons i{
+            font-size: 25px;
+            margin-top: 15px;
+            padding-right: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class = navbar>
+        <nav>
+            <h1> &lt;/&gt; My Code Blog</h1>
+
+            <div>
+                <a href = #>Home</a>
+                <a href = #>About</a>
+                <a href = #>Projects</a>
+                <a href = #>Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class = main-container>
+        <div class = left-side>
+            <h3>Recent Posts</h3>
+            <p>HTML Basiscs</p>
+            <p>CSS Grid</p>
+            <p>JavaScript Intro</p>
+            <p>Web Accessability</p>
+        </div>
+
+        <div class = tharun>
+            <div class = inside-container>
+                <h1>Welcome to my <br> coding journey!</h1>
+                <img src="puppy.jpg">
+                <div>
+                    <button class = button-1>Learn More</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer class = footer>
+                <p>&copy; 2024 My coding Journey. All rights reserved.</p>
+                <div class = icons>
+                    <i class = "fab fa-facebook"></i>
+                    <i class = "fab fa-twitter"></i>
+                    <i class = "fab fa-linkedin"></i>
+                    <i class = "fab fa-youtube"></i>
+                    <i class = "fab fa-telegram"></i>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
