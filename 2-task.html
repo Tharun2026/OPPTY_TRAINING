@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section-1 {
+            display: flex;
+            max-width: 1400px;
+            background: #f3f4f7;
+        }
+
+        .vertical-line {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-size: 34px;
+            color: rgb(51, 57, 115);
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .container {
+            flex: 2.5;
+            padding: 10px;
+        }
+
+        .image-1 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .image-1 img {
+            width: 70px;
+        }
+        .image-1 h2{
+            font-size: 38px;
+            font-weight: 500;
+        }
+        .image-wrapper img{
+            height: 300px;
+            border-radius: 8px;
+            width: 600px;
+        }
+        .tha{
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        .section-2{
+            display: flex;
+            height:auto;
+            background-color: rgb(226, 242, 245);
+        }
+        .vertical-item{
+            flex: 1;
+            border-left: 1px solid grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+        .vertical-item img{
+            width: 52px;
+            margin-bottom: 100px;
+        }
+
+        .vertical-text{
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 28px;
+            color:rgb(65 210 242);
+            text-align: center;
+            line-height: 1.2;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=section-1>
+        <div class=vertical-line>
+            Women in HealthCare
+        </div>
+        <div class=container>
+            <div class=image-1>
+                <img src="WhatsApp Image 2026-03-02 at 2.45.39 PM.jpeg">
+                <h2>Women in HealthCare</h2>
+            </div>
+            <h3>Thursday, March 5,2026 | Linked Device</h3>
+            <div class=image-wrapper>
+                <img src="women-in-healthcare-steering-ai-enabled-care-ecosystem-web.jpg">
+            </div>
+            <p class = tha>Our healthcare and life sciences forum will see women leaders<br> discussing AI in
+                healthcare,transforming healthcare,and impacting<br> lives with innovation and tech,</p>
+            <a href=#>READ MORE →</a>
+
+        </div>
+
+        <div class = section-2>
+            <div class = vertical-item>
+                <img src = "usa.jpeg">
+                <div class = vertical-text>SAP A&D Innovation Days' 26</div>
+            </div>
+            <div class =vertical-item>
+                <img src= "belgium.jpg">
+                <div class = vertical-text>TCS at Leaders in Logistics</div>
+            </div>
+            <div class =vertical-item>
+                <img src ="usa.jpeg">
+                <div class = vertical-text>TCS at NVIDIA GTC 2026</div>
+            </div>
+            <div class = vertical-item>
+                <img src = "usa.jpeg">
+                <div class =vertical-text >TCS at SSOW Conference 2026</div>
+            </div>
+            <div class = vertical-item>
+                <img src = "usa.jpeg">
+                <div class = vertical-text>TCS Life SCiences Forum</div>
+            </div>
+            <div class = vertical-item>
+                <img src = "usa.jpeg">
+                <div class = vertical-text>TCS at Adobe Summit 2026</div>
+            </div>
+            <div class = vertical-item>
+                <img src = "usa.jpeg">
+                <div class = vertical-text>TCS at Google Cloud Next</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
