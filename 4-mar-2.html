@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1{
+            width:90%;
+            margin: auto;
+        }
+        h1{
+            font-size: 26px;
+            margin-bottom: 40px;
+        }
+        .forms-section{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .form-box{
+            width: 48%;
+        }
+        h2{
+            text-align: center;
+            font-family: serif;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        .form-group{
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        label{
+            width: 80px;
+            font-size: 16px;
+        }
+        input{
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        input:hover{
+            border:1px solid black;
+        }
+        textarea{
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            height: 120px;
+        }
+        textarea:hover{
+            border:1px solid black;
+        }
+        button{
+            margin-left: 120px;
+            padding: 8px 15px;
+            border: 1px solid #bbb;
+            background-color: #f3f3f3;
+        }
+        button:hover{
+            background:#e0e0e0;
+        }
+        span{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class = container-1>
+        <h1>Bit Repository contact form</h1>
+        <div class = forms-section>
+            <div class =form-box>
+                <h2>Contact Us</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label>Name<span>*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class =form-group>
+                        <label>E-mail<span>*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class =form-group>
+                        <label>Subject<span>*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class = form-group>
+                        <label>Comments<span>*</span></label>
+                        <textarea></textarea>
+                    </div>
+                    <button>Send Message</button>
+                </form>
+            </div>
+
+            <div>
+                <h2>What do you think about this website?</h2>
+                <form>
+                    <div class = form-group>
+                        <label>Name<span>*</span></label>
+                        <input type = text>
+                    </div>
+                    <div class = form-group>
+                        <label>Opinion<span>*</span></label>
+                        <textarea></textarea>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
