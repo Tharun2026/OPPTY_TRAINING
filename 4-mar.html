@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section-1{
+            background: black;
+            padding: 25px;
+        }
+        .container-1{
+            margin-top: 15px;
+            text-align: center;
+        }
+        .container-1 h1{
+            color: white;
+        }
+        .grid-section{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 15px;
+            padding-top: 20px;
+        }
+        .card{
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .card img{
+            width: 290px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .heading{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            font-size: 18px;
+            text-align: left;
+            color: white;
+            margin-right: 10px;
+        }
+        .section-2{
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        span{
+            color: orange;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class = section-1>
+        <div class = container-1>
+            <h1>Shaping the Future with AI at the Core</h1>
+        </div>
+
+        <div class = grid-section>
+            <div class = card>
+                <img src = "1.png" alt = "Image-1">
+                <div class = heading>
+                    Agentic AI in<br>Manufacturing: The 5-<br>Stage Blueprint for an Autonomous Industry.
+                </div>
+            </div>
+            <div class = card>
+                <img src = "2.png" alt = "Image-2">
+                <div class = heading>
+                    Professional Services in <br>2026: 5 Trends powering the Next Frontier
+                </div>
+            </div>
+            <div class = card>
+                <img src = "3.png" alt = "Image-3">
+                <div class = heading>
+                    Professional Services in <br>2026: 5 Trends powering the Next Frontier
+                </div>
+            </div>
+            <div class = card>
+                <img src = "4.png" alt = "Image-4">
+                <div class = heading>
+                    Professional Services in <br>2026: 5 Trends powering the Next Frontier
+                </div>
+            </div>
+            <div class = card>
+                <img src = "5.png" alt = "Image-5">
+                <div class = heading>
+                    Professional Services in <br>2026: 5 Trends powering the Next Frontier
+                </div>
+            </div>
+        </div>
+
+        <div class = section-2>
+            View All<span>&#8599</span> #html entites
+        </div>
+    </section>
+</body>
+</html>
