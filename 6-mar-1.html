@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+    <style>
+        .section-1{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-1 {
+            width: 400px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .para-1{
+            color: #777;
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        .card{
+            background: #f0ecec;
+            border-left: 5px solid #f4c430;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .card strong {
+            display: block;
+        }
+
+        .card span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background: #fafafa;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #111;
+        }
+
+        select {
+            width: 106%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background: #fafafa;
+        }
+
+        select:hover {
+            border: 1px solid black;
+        }
+        input:hover {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <section class = section-1>
+        <div class="container-1">
+            <h1>Enroll in Course</h1>
+            <p class="para-1">Join the best instructors and start learning today.</p>
+
+            <div class="card">
+                <strong>Course: Learn UI Design with Figma</strong>
+                <span>Instructor: Daniele Buffa</span>
+            </div>
+
+            <form>
+                <label>FULL NAME</label>
+                <input type="text" placeholder="Enter your full name">
+
+                <label>EMAIL ADDRESS</label>
+                <input type="email" placeholder="name@example.com">
+
+                <label>SELECT EXPERIENCE LEVEL</label>
+                <select>
+                    <option>Begineer (0 to 100)</option>
+                    <option>Intermediate (100 to 500)</option>
+                    <option>Advanced (500 t0 1000)</option>
+                </select>
+
+                <button type="submit">Proceed to Payment <span class="ok">&#8594;</span></button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
